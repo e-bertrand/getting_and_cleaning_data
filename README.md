@@ -21,7 +21,7 @@ Expand the zip file maintaining the directory structure. A `UCI HAR Dataset` dir
 
 ## Basic purpose and structure of the R script `run_analysis.R`
 
-The basic purpose of the script is to bind the data of the UCI HAR experiment, which are splitted in different files, in a unique data set and then to proceed to clean it and restructuring it according the tidy data good priciples and practices (see Hadley Wickham's paper ["Tidy Data"](http://www.jstatsoft.org/article/view/v059i10 "Tidy Data paper")).
+The basic purpose of the script is to bind the data of the UCI HAR experiment, which are splitted in different files, in a unique data set and then to proceed to clean it and restructuring it according the tidy data good principles and practices (see Hadley Wickham's paper ["Tidy Data"](http://www.jstatsoft.org/article/view/v059i10 "Tidy Data paper")).
 
 The final data set `summary_uci_har` summarizes for every subject and activity some of the variables (all of those related to mean and standard deviation of sensor signals) included in the original raw files.
 
