@@ -1,5 +1,5 @@
 ##############################################################################
-# This script produces and exports a single tidy data set ("summary_uci_har") 
+# This script produce and export a single tidy data set ("summary_uci_har") 
 # from the set of files that make up the UCI Human Activity Recognition 
 # experiment. The final data setsummarizes the average value of means and 
 # standard deviations from the different sensor signals that have been measured.
@@ -138,6 +138,16 @@ summary_uci_har <- uci_har_dt %>%
                   group_by(subject, activity, sensorsignal) %>%
                   summarize_each(funs(mean))
 
+#
+# Defining fixed variables as factors (character). sensorsignal is already a
+# factor
+#
+summary_uci_har$subject <- as.factor(summary_uci_har$subject)
+summary_uci_har$activity <- as.factor(summary_uci_har$activity)
+
+#
+# Exporting the data.table as a text file in the working directory
+#
 write.table(summary_uci_har, file = "summary_uci_har.txt", sep = ",",
             row.names = FALSE)
 #
