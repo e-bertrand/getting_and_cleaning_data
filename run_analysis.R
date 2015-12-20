@@ -1,5 +1,5 @@
 ##############################################################################
-# This script produce and export a single tidy data set ("summary_uci_har") 
+# This script produces and exports a single tidy data set ("summary_uci_har") 
 # from the set of files that make up the UCI Human Activity Recognition 
 # experiment. The final data setsummarizes the average value of means and 
 # standard deviations from the different sensor signals that have been measured.
