@@ -1,3 +1,14 @@
+##############################################################################
+# This script produce and export a single tidy data set ("summary_uci_har") 
+# from the set of files that make up the UCI Human Activity Recognition 
+# experiment. The final data setsummarizes the average value of means and 
+# standard deviations from the different sensor signals that have been measured.
+#
+# ATTENTION: the script must be run in the directory where the original 
+# "UCI HAR Dataset.zip" has been expanded. That is a directory 
+# "UCI HAR Dataset", and its subdirectories "train" and "test", must exist in
+# the same directory where script is running.
+##############################################################################
 #
 ##############################################################################
 # Step 0. Loading required packages
@@ -120,14 +131,14 @@ for (i in exp_ini) {
 #         Measure Columns are gathered in a sensor_signal -> value structure
 ###############################################################################
 #
-summary_uci_har_dt <- uci_har_dt %>%
+summary_uci_har <- uci_har_dt %>%
                   gather(sensorsignal, average, 
                          3:length(uci_har_dt)) %>%
                   arrange(subject, activity, sensorsignal) %>%
                   group_by(subject, activity, sensorsignal) %>%
                   summarize_each(funs(mean))
 
-write.table(summary_uci_har_dt, file = "summary_uci_har.txt", sep = ",",
+write.table(summary_uci_har, file = "summary_uci_har.txt", sep = ",",
             row.names = FALSE)
 #
 ###############################################################################
