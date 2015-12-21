@@ -1,11 +1,11 @@
 ##############################################################################
-# This script produce and export a single tidy data set ("summary_uci_har") 
+# This script produce and export a single tidy dataset ("summary_uci_har.txt") 
 # from the set of files that make up the UCI Human Activity Recognition 
-# experiment. The final data setsummarizes the average value of means and 
+# experiment. The final dataset summarizes the average value of means and 
 # standard deviations from the different sensor signals that have been measured.
 #
 # ATTENTION: the script must be run in the directory where the original 
-# "UCI HAR Dataset.zip" has been expanded. That is a directory 
+# "UCI HAR Dataset.zip" has been expanded. That is, a directory 
 # "UCI HAR Dataset", and its subdirectories "train" and "test", must exist in
 # the same directory where script is running.
 ##############################################################################
